@@ -1,0 +1,33 @@
+
+	<% blogs.forEach(function(blog) { %>
+	<div class="modal fade" id="<%= blog._id %>" tabindex="-1" role="dialog" aria-labelledby="modalTitulo">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="modalTitulo"></h4>
+				</div>
+
+				<div class="modal-body">
+					<div class="container">
+						<div class="info">
+							<span><%= blog.fecha %></span>
+							<h4><%= blog.titulo %></h4>
+							<span>Por <%= blog.autor.first_name + " " + blog.autor.first_lastname %></span>
+						</div>
+
+						<img class="img-responsive" src="<%= blog.imagen %>" alt="img">
+
+						<div class="contenido">
+							<%- blog.texto %>
+						</div>
+
+						<div class="fb-comments" data-href="https://localhost/g27/#<%= blog._id %>" data-numposts="5" data-mobile="true"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<% }); %>
+	
+	

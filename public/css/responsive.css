@@ -1,0 +1,25 @@
+/*TABLETS*/
+
+@media (min-width: 768px) {
+    .modal-body .container {
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .entradas img {
+        max-width: 100px;
+        float: left;
+        margin-right: 5px;
+        padding-bottom: 15px;
+    }
+    .entradas {
+        margin: 10px 0 10px;
+    }
+    .nav-pills {
+        width: 300px;
+    }
+    .nav-pills>li {
+        float: none;
+    }
+}

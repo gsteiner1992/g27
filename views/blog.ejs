@@ -1,0 +1,38 @@
+<div id="blog" style="padding-top: 50px;">
+	<div class="container">
+		<div class="iconos center-block">
+			<img class="img-responsive" src="img/servicios-icon.png">
+		</div>
+
+		<div>
+			<h2>Leénos, <br>actualizamos cada semana</h2>
+			<br>
+			<h5>Blog</h5>
+		</div>
+		<div class="container" style="max-width: 600px;">
+			
+			<div class="row" id="rotar">
+				
+				<% blogs.forEach (function(blog) {%>
+				<div class="entradas col-md-4 col-sm-6 col-xs-12" data-toggle="modal" data-target="#<%= blog._id %>">
+					<img class="img-responsive" src="<%= blog.imagen %>" alt="">
+					<div class="info">
+						<span><%= blog.fecha %></span>
+						<h3><%= blog.titulo %></h3>
+						<span>Por <%= blog.autor.first_name + " " + blog.autor.first_lastname %></span>
+					</div>
+				</div>
+				<% }); %>
+				
+			</div>
+		</div>
+	</div>
+
+	<% include modalblog %>
+	<br><br> <br> <br>
+	<div class="objetos center-block">
+		<h2>Siempre estamos listos para diseñar</h2>
+		<img class="img-responsive" src="img/objetos.png">
+	</div>
+
+</div>

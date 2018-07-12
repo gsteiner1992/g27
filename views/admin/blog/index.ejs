@@ -1,0 +1,35 @@
+<% include ../header %>
+
+<h1 class="text-center">BLOGS</h1>
+<div class="container">
+	<table class="table table-bordered">
+		    <thead>
+		        <tr>
+		            <th>Título</th>
+		            <th>Autor</th>
+		            <th>Etiquetas</th>
+		            <th>Fecha</th>
+		            <th>ACCIONES</th>
+		        </tr>
+		    </thead>
+		    
+		    <tbody>
+		        <% blogs.forEach(function(blog) {%>
+		        <tr>
+		            <td><%= blog.titulo %></td>
+		            <td><%= blog.autor.first_name + " " + blog.autor.first_lastname %></td>
+		            <td><%= blog.etiquetas %></td>
+		            <td><%= blog.fecha %></td>
+		            <td>ACCIONES</td>
+		            
+		        </tr>
+		        <% });%>
+		  </tbody>
+    </table>
+    
+    <a href="/admin/blog/new" class="btn btn-primary">Agregar nueva entrada</a>
+</div>
+
+
+
+<% include ../footer %>

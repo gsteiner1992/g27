@@ -1,0 +1,31 @@
+<%include ../header%>
+
+<h1 class="text-center">NUEVO BLOG</h1>
+
+<div class="container">
+    <form action="/admin" method="POST">
+        <div class="form-group">
+            <label>Título</label>
+            <input type="text" class="form-control" name="titulo">
+        </div>
+    
+        <div class="form-group">
+            <label>URL de Imagen</label>
+            <input type="text" class="form-control" name="imagen">
+        </div>
+        
+        <div class="form-group">
+            <textarea id="edit" name="texto"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label>Etiquetas</label>
+            <input type="text" class="form-control" placeholder="Separadas por comas..." name="etiquetas">
+        </div>
+        
+        <button class="btn btn-primary">Agregar</button>
+        
+    </form>
+</div>
+
+<% include ../footer %>
